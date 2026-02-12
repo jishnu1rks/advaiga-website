@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advaiga Creations | Smart & Sustainable</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./LOGO.png">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .active-nav {
+            color: #e1529a !important;
+            font-weight: 700;
+        }
+        section {
+            scroll-margin-top: 96px; /* Accounts for the 24rem (h-24) header */
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #e1529a;
+            transition: width 0.3s ease;
+        }
+        .nav-link.active-nav::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md">
+        <div class="container mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#home" class="flex items-center h-16 transition-transform hover:scale-105">
+                <img src="LOGO.png" alt="Advaiga Creations" class="h-full w-auto object-contain">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="#home" class="nav-link text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900">Home</a>
+                <a href="#mission" class="nav-link text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900">Mission</a>
+                <a href="#products" class="nav-link text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900">Products</a>
+                <a href="#about" class="nav-link text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900">About</a>
+                <a href="#contact" class="nav-link text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none" aria-label="Toggle Menu">
+                <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white p-6 space-y-4 shadow-2xl transition-all duration-300">
+            <a href="#home" class="mobile-nav-link block text-lg font-bold text-gray-600 hover:text-[#e1529a]">Home</a>
+            <a href="#mission" class="mobile-nav-link block text-lg font-bold text-gray-600 hover:text-[#e1529a]">Mission & Vision</a>
+            <a href="#products" class="mobile-nav-link block text-lg font-bold text-gray-600 hover:text-[#e1529a]">Products</a>
+            <a href="#about" class="mobile-nav-link block text-lg font-bold text-gray-600 hover:text-[#e1529a]">About Us</a>
+            <a href="#contact" class="mobile-nav-link block text-lg font-bold text-gray-600 hover:text-[#e1529a]">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="overflow-hidden bg-white">
+            <div class="container mx-auto px-6 py-20 md:py-32">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-10">
+                        <span class="inline-block px-4 py-2 text-xs font-bold tracking-[0.2em] text-white uppercase bg-[#e1529a] rounded-full shadow-lg shadow-[#e1529a]/20">
+                            Innovation from Kannur
+                        </span>
+                        <h1 class="text-6xl md:text-8xl font-light tracking-tighter text-gray-900 leading-none">
+                            Smart and <br />
+                            <span class="italic font-normal text-gray-400">Sustainable</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl leading-relaxed text-gray-500 font-light max-w-xl">
+                            Bridging deep scientific expertise with the rich traditions of craftsmanship to build harmony between technology and nature.
+                        </p>
+                        <div class="flex flex-wrap gap-6 pt-4">
+                            <a href="#products" class="px-10 py-5 bg-gray-900 text-white rounded-full font-bold tracking-widest text-sm hover:bg-[#e1529a] transition-all transform hover:-translate-y-1 shadow-xl">
+                                DISCOVER PRODUCTS
+                            </a>
+                            <a href="#about" class="px-10 py-5 border-2 border-gray-100 text-gray-600 rounded-full font-bold tracking-widest text-sm hover:border-[#e1529a] hover:text-[#e1529a] transition-all">
+                                OUR JOURNEY
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="rounded-[3rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+                            <img 
+                                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200" 
+                                alt="Laboratory" 
+                                class="w-full aspect-[4/5] object-cover"
+                            />
+                        </div>
+                        <div class="absolute -z-10 -bottom-10 -left-10 w-64 h-64 bg-[#e1529a]/10 rounded-full blur-3xl"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission" class="bg-gray-50 py-24 md:py-40">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto space-y-24">
+                    <div class="text-center">
+                        <h2 class="text-sm font-bold uppercase tracking-[0.4em] text-[#e1529a] mb-6">Foundations</h2>
+                        <h1 class="text-5xl md:text-7xl font-light tracking-tighter text-gray-900">Mission & Vision</h1>
+                        <div class="h-1.5 w-32 bg-[#e1529a] mx-auto mt-8 rounded-full"></div>
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-20">
+                        <div class="space-y-8 bg-white p-12 rounded-[3rem] shadow-sm border border-gray-100">
+                            <h3 class="text-2xl font-bold uppercase tracking-[0.3em] text-[#e1529a]">Mission</h3>
+                            <p class="text-xl text-gray-600 font-light leading-relaxed">
+                                Transforming renewable waste into high-performance materials through advanced tech, balancing aesthetics and environmental responsibility.
+                            </p>
+                        </div>
+                        <div class="space-y-8 bg-white p-12 rounded-[3rem] shadow-sm border border-gray-100">
+                            <h3 class="text-2xl font-bold uppercase tracking-[0.3em] text-[#e1529a]">Vision</h3>
+                            <p class="text-xl text-gray-600 font-light leading-relaxed">
+                                Leading the transition toward a circular materials ecosystem globally and redefining advanced products through a sustainable lens.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-24 md:py-40 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mb-24 space-y-6">
+                    <span class="text-[#e1529a] font-bold tracking-[0.4em] text-xs uppercase">Future Materials</span>
+                    <h1 class="text-5xl md:text-7xl font-light tracking-tighter text-gray-900">Our Innovations</h1>
+                    <p class="text-xl text-gray-400 font-bold tracking-widest uppercase italic">Patent Pending Platform</p>
+                </div>
+                
+                <div class="grid gap-24">
+                    <!-- Product 1 -->
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-8 order-2 md:order-1">
+                            <h2 class="text-4xl font-bold text-gray-900 tracking-tighter">Biodegradable Solutions</h2>
+                            <p class="text-lg text-gray-500 leading-relaxed">Materials designed to fulfill their purpose and disappear gracefully.</p>
+                            <div class="grid gap-4">
+                                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#e1529a] transition-colors">
+                                    <p class="font-bold text-gray-900">Sustainable Toys & Cutleries</p>
+                                </div>
+                                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#e1529a] transition-colors">
+                                    <p class="font-bold text-gray-900">3D Printing Filaments</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-[3rem] overflow-hidden shadow-2xl order-1 md:order-2 aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div class="rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-8">
+                            <h2 class="text-4xl font-bold text-gray-900 tracking-tighter">Smart Furniture</h2>
+                            <p class="text-lg text-gray-500 leading-relaxed">Intelligent spatial solutions for the modern, conscious home.</p>
+                            <div class="grid gap-4">
+                                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#e1529a] transition-colors">
+                                    <p class="font-bold text-gray-900">Foldable Space-Saving Units</p>
+                                </div>
+                                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#e1529a] transition-colors">
+                                    <p class="font-bold text-gray-900">Eco-friendly Nursery Items</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-gray-50 py-24 md:py-40">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto space-y-24">
+                    <div class="space-y-6">
+                        <span class="text-[#e1529a] font-bold tracking-[0.4em] text-xs uppercase">Our DNA</span>
+                        <h1 class="text-5xl md:text-7xl font-light tracking-tighter text-gray-900">About Advaiga</h1>
+                        <p class="text-2xl text-gray-400 font-light leading-relaxed italic border-l-4 border-[#e1529a] pl-8">
+                            Sustainable Materials. Intelligent Systems. Real-World Impact.
+                        </p>
+                    </div>
+                    <div class="bg-white p-12 md:p-16 rounded-[3.5rem] border border-gray-100 shadow-sm leading-loose">
+                        <p class="text-xl text-gray-600 mb-8">
+                            Located within the <strong>Innovation and Incubation Foundation at Kannur University</strong>, Advaiga Creations is a hub where heritage meets technology.
+                        </p>
+                        <p class="text-xl text-gray-600">
+                            Our team works at the intersection of material science and design, leveraging regional biodiversity to create globally relevant sustainable solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 md:py-40 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-light tracking-tighter text-gray-900 mb-20">Get in Touch</h1>
+                    <div class="grid md:grid-cols-2 gap-20">
+                        <div class="bg-gray-900 text-white p-12 md:p-16 rounded-[3.5rem] space-y-12 shadow-2xl">
+                            <div>
+                                <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-[#e1529a] mb-8">Headquarters</h2>
+                                <div class="text-xl md:text-2xl space-y-4 font-light">
+                                    <p class="font-bold text-[#e1529a]">KU-IIF</p>
+                                    <p>No. 306, Student Amenity Centre</p>
+                                    <p>Kannur University, Civil Station P.O.</p>
+                                    <p>Kannur – 670002, Kerala, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center space-y-12">
+                            <div class="space-y-6">
+                                <h3 class="text-3xl font-bold">Contact Details</h3>
+                                <p class="text-gray-500 text-lg">Interested in collaborations or supply? Reach out to our team directly.</p>
+                            </div>
+                            <div class="p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 group hover:border-[#e1529a] transition-all">
+                                <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Direct Email</p>
+                                <div class="text-2xl md:text-3xl font-light text-[#e1529a] flex items-center gap-4">
+                                    sales@advaiga.com
+                                    <svg class="w-8 h-8 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-100 py-20 mt-auto">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div class="space-y-6">
+                    <img src="LOGO.png" alt="Advaiga Creations" class="h-16 w-auto object-contain">
+                    <p class="text-base text-gray-500 leading-relaxed max-w-sm">
+                        Revolutionizing high-performance materials through sustainable innovation and regional craftsmanship.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="text-sm font-bold uppercase tracking-[0.2em] text-gray-900">Information</h4>
+                    <p class="text-base text-gray-500">CIN: U36910KL2022PTC077088</p>
+                    <p class="text-base text-gray-500">DIPP ID: DIPP107554</p>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="text-sm font-bold uppercase tracking-[0.2em] text-gray-900">Legal</h4>
+                    <nav class="flex flex-col space-y-3">
+                        <a href="#" class="text-base text-gray-500 hover:text-[#e1529a]">Privacy Policy</a>
+                        <a href="#" class="text-base text-gray-500 hover:text-[#e1529a]">Terms of Service</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="mt-20 pt-8 border-t border-gray-200 text-center md:text-left">
+                <p class="text-sm text-gray-400 font-medium">
+                    © <span id="year"></span> Advaiga Creations Private Limited. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
